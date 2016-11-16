@@ -477,13 +477,19 @@ public final class Xml {
                 //e.printStackTrace();
             } finally {
                 transFact.setURIResolver(new JeevesURIResolver());
-                Transformer t = transFact.newTransformer(srcSheet);
-                if (params != null) {
-                    for (Map.Entry<String, Object> param : params.entrySet()) {
-                        t.setParameter(param.getKey(), param.getValue());
-                    }
+                try {
+	                Transformer t = transFact.newTransformer(srcSheet);
+	                if (params != null) {
+	                    for (Map.Entry<String, Object> param : params.entrySet()) {
+	                        t.setParameter(param.getKey(), param.getValue());
+	                    }
+	                }
+                	t.transform(srcXml, result);
+                } catch(Exception e) {
+                	/* Added by Gustaaf Vandeboel for info about the xslt transform error */
+                	Log.error(Log.ENGINE, e.getMessage());
+                	throw e;
                 }
-                t.transform(srcXml, result);
             }
         }
     }

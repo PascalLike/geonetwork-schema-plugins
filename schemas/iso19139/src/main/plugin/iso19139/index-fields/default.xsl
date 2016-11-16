@@ -38,6 +38,17 @@
 
   <xsl:include href="../convert/functions.xsl"/>
   <xsl:include href="../../../xsl/utils-fn.xsl"/>
+	
+	<!-- TODO: remove this comment <xsl:include href="../../../../../../../web/target/geonetwork/xsl/utils-fn.xsl" /> 
+	xmlns:java="java:org.fao.geonet.util.XslUtil?path=file:///C:/git/aiv-geonetwork-gim/core/target/classes/"
+
+	<xsl:include href="../../../../../../../web/target/geonetwork/xsl/utils-fn.xsl" />
+	<xsl:include href="../../../xsl/utils-fn.xsl"/>
+
+
+                xmlns:util="java:org.fao.geonet.util.XslUtil?path=file:///C:/git/aiv-geonetwork-gim/core/target/classes/"
+				xmlns:util="java:org.fao.geonet.util.XslUtil"
+	 -->  
   <xsl:include href="index-subtemplate-fields.xsl"/>
 
   <!-- This file defines what parts of the metadata are indexed by Lucene

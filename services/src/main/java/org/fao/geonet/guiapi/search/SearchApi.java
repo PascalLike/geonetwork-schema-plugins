@@ -62,6 +62,7 @@ public class SearchApi {
             "provide a list of values.",
         nickname = "getRecords")
     @RequestMapping(
+        headers="Accept=*/*",
         produces = {
             MediaType.TEXT_HTML_VALUE,
             MediaType.APPLICATION_JSON_VALUE,

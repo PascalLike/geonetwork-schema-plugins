@@ -68,6 +68,7 @@ public class CatalogApi {
         nickname = "getAsRdf")
     @RequestMapping(
         method = RequestMethod.GET,
+        headers="Accept=*/*",
         consumes = {
             MediaType.ALL_VALUE
         },
